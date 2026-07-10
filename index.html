@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tony Williams — Senior Data Engineer / BI Developer</title>
+<meta name="description" content="Tony Williams — Senior Data Engineer / BI Developer. 17 years turning healthcare and market data into decisions: pipelines, analytics engineering, real-time systems, and reporting automation.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='13'%20fill='%2310161f'/%3E%3Cpath%20d='M12%2016%20C30%2016%2030%2032%2036%2032%20M12%2032%20H36%20M12%2048%20C30%2048%2030%2032%2036%2032'%20stroke='%234b9cd3'%20fill='none'%20stroke-width='3.5'%20stroke-linecap='round'/%3E%3Ccircle%20cx='44'%20cy='32'%20r='9'%20fill='%230a9e86'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#10161f;
+  --panel:#151c26;
+  --stroke:#26303d;
+  --grid:#1a2330;
+  --text:#e8edf4;
+  --slate:#8b98a9;
+  --dim:#5c6a7d;
+  --green:#0a9e86;
+  --red:#f23645;
+  --blue:#4b9cd3;
+  --mono:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
+  --sans:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background-color:var(--bg);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:40px 40px;
+  color:var(--text);
+  font-family:var(--sans);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+@media(max-width:480px){.wrap{padding:0 16px}}
+
+/* ---------- HERO ---------- */
+.hero{padding:72px 0 40px}
+.hero-grid{display:grid;grid-template-columns:minmax(300px,5fr) minmax(0,7fr);gap:40px;align-items:center}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:28px}}
+.eyebrow{
+  font-family:var(--mono);font-size:13px;letter-spacing:.22em;
+  color:var(--green);margin-bottom:14px;
+}
+h1{
+  font-size:clamp(38px,6vw,56px);font-weight:700;letter-spacing:.01em;
+  line-height:1.08;margin-bottom:16px;
+}
+.tagline{
+  font-family:var(--mono);font-size:14px;letter-spacing:.06em;
+  color:var(--slate);max-width:34ch;
+}
+.hero-meta{
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+  color:var(--dim);margin-top:26px;
+}
+.pipeline-panel{
+  background:var(--panel);border:1px solid var(--stroke);border-radius:14px;
+  padding:18px 14px;overflow-x:auto;
+}
+.pipeline-panel svg{display:block;width:100%;min-width:470px;height:auto}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .flow-dot{display:none}
+}
+
+/* ---------- STATUS STRIP ---------- */
+.status{margin:26px 0 0}
+.status-bar{
+  background:var(--panel);border:1px solid var(--stroke);border-radius:12px;
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.stat{padding:16px 10px;text-align:center;border-left:1px solid var(--stroke)}
+.stat:first-child{border-left:none}
+.stat .num{
+  font-family:var(--mono);font-size:19px;font-weight:700;
+  color:var(--green);letter-spacing:.06em;
+}
+.stat .lbl{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;
+  color:var(--slate);margin-top:5px;text-transform:uppercase;
+}
+@media(max-width:760px){
+  .status-bar{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3){border-left:none}
+  .stat:nth-child(n+3){border-top:1px solid var(--stroke)}
+}
+
+/* ---------- SECTIONS ---------- */
+section{padding:56px 0 0}
+.sec-eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.24em;
+  color:var(--dim);margin-bottom:24px;display:flex;align-items:center;gap:16px;
+}
+.sec-eyebrow::after{content:"";flex:1;height:1px;background:var(--stroke)}
+
+/* ---------- CARDS ---------- */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
+.card{
+  position:relative;display:block;
+  background:var(--panel);border:1px solid var(--stroke);border-radius:12px;
+  padding:22px 22px 20px 26px;color:var(--text);
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.card:hover{text-decoration:none}
+a.card:hover{
+  transform:translateY(-3px);
+  border-color:var(--acc);
+  box-shadow:0 10px 28px rgba(0,0,0,.45), 0 0 0 1px var(--acc);
+}
+@media (prefers-reduced-motion: reduce){
+  a.card:hover{transform:none}
+}
+.card::before{
+  content:"";position:absolute;left:-1px;top:10px;bottom:10px;width:4px;
+  border-radius:2px;background:var(--acc);
+}
+.acc-blue{--acc:var(--blue)}
+.acc-green{--acc:var(--green)}
+.acc-slate{--acc:var(--slate)}
+.acc-red{--acc:var(--red)}
+.card .kicker{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;
+  color:var(--acc);margin-bottom:10px;padding-right:70px;
+}
+.card h3{font-size:19px;font-weight:650;margin-bottom:8px}
+.card p{font-size:13.5px;color:var(--slate);margin-bottom:16px;max-width:52ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;
+  border:1px solid var(--slate);color:var(--slate);
+  border-radius:999px;padding:3px 11px;opacity:.9;white-space:nowrap;
+}
+.chip.g{border-color:var(--green);color:var(--green)}
+.chip.b{border-color:var(--blue);color:var(--blue)}
+.chip.r{border-color:var(--red);color:var(--red)}
+.card .glyph{position:absolute;top:24px;right:22px;opacity:.9}
+@media(max-width:480px){.card .glyph{display:none}.card .kicker{padding-right:0}}
+.card .private-tag{
+  position:absolute;top:22px;right:22px;
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--dim);
+}
+.card.static .private-tag{top:auto;bottom:22px}
+
+/* ---------- AMBIENT ---------- */
+.ambient{padding:56px 0 0}
+.ambient-strip{
+  border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke);
+  background:var(--panel);
+}
+.ambient-strip img{
+  display:block;width:100%;height:clamp(110px,18vw,200px);
+  object-fit:cover;opacity:.9;
+}
+
+/* ---------- ABOUT ---------- */
+.about-panel{
+  background:var(--panel);border:1px solid var(--stroke);border-radius:14px;
+  padding:30px 32px;
+}
+@media(max-width:480px){.about-panel{padding:24px 18px}}
+.about-panel p{font-size:15px;color:var(--text);max-width:74ch}
+.about-panel p strong{color:var(--text)}
+.about-panel p + p{margin-top:14px}
+.toolbox{
+  margin-top:22px;padding-top:18px;border-top:1px solid var(--stroke);
+  font-family:var(--mono);font-size:12px;letter-spacing:.05em;
+  color:var(--slate);line-height:2;
+}
+.toolbox .dot{color:var(--dim);padding:0 6px}
+.toolbox .k{color:var(--green)}
+
+/* ---------- FOOTER ---------- */
+footer{margin-top:72px;border-top:1px solid var(--stroke);background:var(--panel)}
+.foot-inner{
+  display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between;
+  padding:26px 0;
+}
+.foot-name{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--dim)}
+.foot-links{display:flex;gap:24px}
+.foot-links a{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--slate);
+}
+.foot-links a:hover{color:var(--green);text-decoration:none}
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">SENIOR DATA ENGINEER · BI DEVELOPER</p>
+      <h1>Tony Williams</h1>
+      <p class="tagline">17 years turning healthcare + market data into decisions</p>
+      <p class="hero-meta">ATLANTA, GA&nbsp;&nbsp;·&nbsp;&nbsp;PYTHON&nbsp;&nbsp;·&nbsp;&nbsp;SQL&nbsp;&nbsp;·&nbsp;&nbsp;DBT&nbsp;&nbsp;·&nbsp;&nbsp;C#</p>
+    </div>
+
+    <div class="pipeline-panel" aria-label="Animated pipeline schematic: claims, market ticks and documents flow into a build pipeline that produces insights, dashboards and alerts">
+      <svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+        <!-- source icons -->
+        <polyline points="8,48 18,48 23,38 29,58 34,48 44,48" fill="none" stroke="#4b9cd3" stroke-width="2"/>
+        <g transform="translate(12,120)">
+          <line x1="4" y1="-11" x2="4" y2="11" stroke="#0a9e86" stroke-width="1.5"/><rect x="0.5" y="-4" width="7" height="10" fill="#0a9e86"/>
+          <line x1="17" y1="-13" x2="17" y2="9" stroke="#f23645" stroke-width="1.5"/><rect x="13.5" y="-9" width="7" height="9" fill="#f23645"/>
+          <line x1="30" y1="-9" x2="30" y2="13" stroke="#0a9e86" stroke-width="1.5"/><rect x="26.5" y="-2" width="7" height="9" fill="#0a9e86"/>
+        </g>
+        <g transform="translate(14,178)">
+          <rect x="0" y="0" width="19" height="26" rx="3" fill="none" stroke="#8b98a9" stroke-width="1.8"/>
+          <line x1="4.5" y1="8" x2="14.5" y2="8" stroke="#8b98a9" stroke-width="1.5"/>
+          <line x1="4.5" y1="14" x2="14.5" y2="14" stroke="#8b98a9" stroke-width="1.5"/>
+        </g>
+
+        <!-- source boxes -->
+        <rect x="56" y="30" width="138" height="36" rx="6" fill="#151c26" stroke="#26303d"/>
+        <text x="125" y="52" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="12" fill="#8b98a9" text-anchor="middle" letter-spacing="1.5">CLAIMS</text>
+        <rect x="56" y="102" width="138" height="36" rx="6" fill="#151c26" stroke="#26303d"/>
+        <text x="125" y="124" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="12" fill="#8b98a9" text-anchor="middle" letter-spacing="1.5">MARKET TICKS</text>
+        <rect x="56" y="174" width="138" height="36" rx="6" fill="#151c26" stroke="#26303d"/>
+        <text x="125" y="196" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="12" fill="#8b98a9" text-anchor="middle" letter-spacing="1.5">DOCUMENTS</text>
+
+        <!-- in paths -->
+        <path d="M 194 48 C 258 48 258 120 306 120" fill="none" stroke="#26303d" stroke-width="1.5"/>
+        <path d="M 194 120 L 306 120" fill="none" stroke="#26303d" stroke-width="1.5"/>
+        <path d="M 194 192 C 258 192 258 120 306 120" fill="none" stroke="#26303d" stroke-width="1.5"/>
+
+        <!-- hub -->
+        <rect x="306" y="93" width="114" height="54" rx="8" fill="#151c26" stroke="#0a9e86" stroke-width="1.5"/>
+        <text x="363" y="115" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="10" fill="#5c6a7d" text-anchor="middle" letter-spacing="2">BUILD</text>
+        <text x="363" y="133" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="13" fill="#e8edf4" text-anchor="middle" letter-spacing="1.5">PIPELINE</text>
+
+        <!-- out paths -->
+        <path d="M 420 120 C 446 120 446 48 464 48" fill="none" stroke="#26303d" stroke-width="1.5"/>
+        <path d="M 420 120 L 464 120" fill="none" stroke="#26303d" stroke-width="1.5"/>
+        <path d="M 420 120 C 446 120 446 192 464 192" fill="none" stroke="#26303d" stroke-width="1.5"/>
+
+        <!-- output boxes -->
+        <rect x="464" y="30" width="92" height="36" rx="6" fill="#151c26" stroke="#26303d"/>
+        <text x="510" y="52" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="11.5" fill="#e8edf4" text-anchor="middle" letter-spacing="1">INSIGHTS</text>
+        <rect x="464" y="102" width="92" height="36" rx="6" fill="#151c26" stroke="#26303d"/>
+        <text x="510" y="124" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="11.5" fill="#e8edf4" text-anchor="middle" letter-spacing="1">DASHBOARDS</text>
+        <rect x="464" y="174" width="92" height="36" rx="6" fill="#151c26" stroke="#26303d"/>
+        <text x="510" y="196" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="11.5" fill="#e8edf4" text-anchor="middle" letter-spacing="1">ALERTS</text>
+
+        <!-- flow dots -->
+        <circle class="flow-dot" r="3.2" fill="#0a9e86">
+          <animateMotion dur="4.5s" begin="0s" repeatCount="indefinite" path="M 194 48 C 258 48 258 120 306 120"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4.5s" begin="0s" repeatCount="indefinite"/>
+        </circle>
+        <circle class="flow-dot" r="3.2" fill="#0a9e86">
+          <animateMotion dur="3.5s" begin="0.8s" repeatCount="indefinite" path="M 194 120 L 306 120"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.5s" begin="0.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle class="flow-dot" r="3.2" fill="#0a9e86">
+          <animateMotion dur="5s" begin="1.6s" repeatCount="indefinite" path="M 194 192 C 258 192 258 120 306 120"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5s" begin="1.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle class="flow-dot" r="3.2" fill="#0a9e86">
+          <animateMotion dur="4s" begin="0.4s" repeatCount="indefinite" path="M 420 120 C 446 120 446 48 464 48"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4s" begin="0.4s" repeatCount="indefinite"/>
+        </circle>
+        <circle class="flow-dot" r="3.2" fill="#0a9e86">
+          <animateMotion dur="3.2s" begin="1.2s" repeatCount="indefinite" path="M 420 120 L 464 120"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.2s" begin="1.2s" repeatCount="indefinite"/>
+        </circle>
+        <circle class="flow-dot" r="3.2" fill="#0a9e86">
+          <animateMotion dur="4.6s" begin="2s" repeatCount="indefinite" path="M 420 120 C 446 120 446 192 464 192"/>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4.6s" begin="2s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+
+  <div class="status">
+    <div class="status-bar" role="list" aria-label="Career stats">
+      <div class="stat" role="listitem"><div class="num">17 YRS</div><div class="lbl">Healthcare Analytics</div></div>
+      <div class="stat" role="listitem"><div class="num">6</div><div class="lbl">Public Systems</div></div>
+      <div class="stat" role="listitem"><div class="num">132</div><div class="lbl">Automated Tests Passing</div></div>
+      <div class="stat" role="listitem"><div class="num">2</div><div class="lbl">Live Platforms Shipped</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="wrap" id="systems">
+    <p class="sec-eyebrow">FEATURED SYSTEMS</p>
+    <div class="cards">
+
+      <a class="card acc-blue" href="https://github.com/antoniowilliams123/healthcare-cost-analytics">
+        <p class="kicker">HEALTHCARE · DBT · DUCKDB</p>
+        <h3>healthcare-cost-analytics</h3>
+        <p>Medicare Part D cost drivers from raw CMS data — price vs utilization decomposition, tested end to end.</p>
+        <div class="chips"><span class="chip b">python</span><span class="chip g">dbt 25/25</span><span class="chip g">pytest 17/17</span></div>
+        <svg class="glyph" width="54" height="44" viewBox="0 0 54 44" aria-hidden="true"><polyline points="0,22 12,22 18,8 26,34 33,15 38,22 52,22" fill="none" stroke="#4b9cd3" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </a>
+
+      <a class="card acc-green" href="https://github.com/antoniowilliams123/realtime-market-charting">
+        <p class="kicker">REAL-TIME · FLASK · SSE</p>
+        <h3>realtime-market-charting</h3>
+        <p>Live multi-quadrant charting platform built from scratch. Demo mode runs the full stack with no data vendor.</p>
+        <div class="chips"><span class="chip b">python + js</span><span class="chip g">53 tests</span><span class="chip">demo GIFs</span></div>
+        <svg class="glyph" width="50" height="46" viewBox="0 -2 50 48" aria-hidden="true"><line x1="6" y1="0" x2="6" y2="40" stroke="#0a9e86" stroke-width="2"/><rect x="1" y="8" width="10" height="18" fill="#0a9e86"/><line x1="24" y1="4" x2="24" y2="44" stroke="#f23645" stroke-width="2"/><rect x="19" y="12" width="10" height="20" fill="#f23645"/><line x1="42" y1="-2" x2="42" y2="36" stroke="#0a9e86" stroke-width="2"/><rect x="37" y="4" width="10" height="16" fill="#0a9e86"/></svg>
+      </a>
+
+      <a class="card acc-green" href="https://github.com/antoniowilliams123/vectorized-backtest-engine">
+        <p class="kicker">PERFORMANCE · NUMPY</p>
+        <h3>vectorized-backtest-engine</h3>
+        <p>Event-study engine for billions of 1-minute bars — vectorized group ops benchmarked 182x over pandas.</p>
+        <div class="chips"><span class="chip b">python</span><span class="chip g">31 tests</span><span class="chip">benchmarks</span></div>
+        <svg class="glyph" width="52" height="38" viewBox="0 0 52 38" aria-hidden="true"><rect x="0" y="0" width="10" height="10" rx="2" fill="#26303d"/><rect x="14" y="0" width="10" height="10" rx="2" fill="#0a9e86"/><rect x="28" y="0" width="10" height="10" rx="2" fill="#26303d"/><rect x="42" y="0" width="10" height="10" rx="2" fill="#0a9e86"/><rect x="0" y="14" width="10" height="10" rx="2" fill="#0a9e86"/><rect x="14" y="14" width="10" height="10" rx="2" fill="#26303d"/><rect x="28" y="14" width="10" height="10" rx="2" fill="#0a9e86"/><rect x="42" y="14" width="10" height="10" rx="2" fill="#26303d"/><rect x="0" y="28" width="10" height="10" rx="2" fill="#26303d"/><rect x="14" y="28" width="10" height="10" rx="2" fill="#0a9e86"/><rect x="28" y="28" width="10" height="10" rx="2" fill="#26303d"/><rect x="42" y="28" width="10" height="10" rx="2" fill="#0a9e86"/></svg>
+      </a>
+
+      <a class="card acc-slate" href="https://github.com/antoniowilliams123/report-booklet-toolkit">
+        <p class="kicker">DOCUMENT AUTOMATION</p>
+        <h3>report-booklet-toolkit</h3>
+        <p>Print-safe, hyperlinked multi-page PDF reports — raster pages with a vector link overlay, at scale.</p>
+        <div class="chips"><span class="chip b">python</span><span class="chip g">6 tests</span><span class="chip">sample PDF</span></div>
+        <svg class="glyph" width="42" height="44" viewBox="0 0 42 44" aria-hidden="true"><rect x="4" y="0" width="34" height="44" rx="4" fill="none" stroke="#8b98a9" stroke-width="2"/><line x1="11" y1="12" x2="31" y2="12" stroke="#8b98a9" stroke-width="2"/><line x1="11" y1="20" x2="31" y2="20" stroke="#8b98a9" stroke-width="2"/><line x1="11" y1="28" x2="24" y2="28" stroke="#0a9e86" stroke-width="2"/></svg>
+      </a>
+
+      <a class="card acc-blue" href="https://github.com/antoniowilliams123/job-alerts-pipeline">
+        <p class="kicker">PIPELINES · AUTOMATION</p>
+        <h3>job-alerts-pipeline</h3>
+        <p>10+ sources scored by a deterministic rubric, delivered to Telegram minutes after a job posts.</p>
+        <div class="chips"><span class="chip b">python</span><span class="chip">cron</span><span class="chip g">self-growing</span></div>
+        <svg class="glyph" width="40" height="42" viewBox="0 0 40 42" aria-hidden="true"><path d="M 20 2 C 10 2 8 12 8 20 L 4 30 L 36 30 L 32 20 C 32 12 30 2 20 2 Z" fill="none" stroke="#4b9cd3" stroke-width="2.5"/><circle cx="20" cy="36" r="4" fill="#4b9cd3"/></svg>
+      </a>
+
+      <div class="card static acc-red">
+        <p class="kicker">C# · NINJATRADER 8</p>
+        <h3>QE Full-Day Sessions</h3>
+        <p>Commercial real-time session/level indicator. Source private.</p>
+        <div class="chips"><span class="chip b">c#</span><span class="chip r">commercial</span><span class="chip">live product</span></div>
+        <svg class="glyph" width="46" height="46" viewBox="0 0 46 46" aria-hidden="true"><rect x="0" y="8" width="44" height="30" rx="4" fill="none" stroke="#8b98a9" stroke-width="2"/><rect x="6" y="14" width="12" height="18" fill="#4b9cd3" opacity="0.5"/><rect x="24" y="14" width="14" height="18" fill="#0a9e86" opacity="0.5"/></svg>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient-strip"><img src="assets/code-ambient.gif" alt="" loading="lazy"></div>
+  </div>
+
+  <section class="wrap" id="about">
+    <p class="sec-eyebrow">ABOUT</p>
+    <div class="about-panel">
+      <p><strong>17 years</strong> in healthcare-payer finance &amp; analytics — Anthem, Aon, Willis Towers Watson, BCBS-NC, Wellnecity — building the pipelines, reconciliation systems, and self-serve reporting that take manual work off analyst teams. Named AI SME for enterprise Claude / agentic adoption.</p>
+      <div class="toolbox">
+        <span class="k">Python</span> (pandas · NumPy)<span class="dot">·</span><span class="k">SQL</span> (Snowflake · Teradata · BigQuery · Postgres)<span class="dot">·</span><span class="k">dbt</span><span class="dot">·</span><span class="k">Tableau</span><span class="dot">·</span><span class="k">AWS</span><span class="dot">·</span><span class="k">Claude &amp; LLM tooling</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span class="foot-name">TONY WILLIAMS · SENIOR DATA ENGINEER / BI DEVELOPER</span>
+    <nav class="foot-links" aria-label="Profiles">
+      <a href="https://github.com/antoniowilliams123">GITHUB</a>
+      <a href="https://www.linkedin.com/in/tonydwilliams1">LINKEDIN</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
